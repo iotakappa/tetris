@@ -384,35 +384,18 @@ def main(stdscr):
                     if moveTetro(0,-1):
                         updateDisplay()
                         sleep(0.05)
-                #n-=xscale
-                #if moveTetro(0, -xscale):
-                #    updateDisplay()                    
             elif c == curses.KEY_RIGHT:
                 for i in range(0,xscale):
                     if moveTetro(0,1):
                         updateDisplay()
                         sleep(0.05)
-                #n-=xscale
-                #if moveTetro(0, xscale):
-                #    updateDisplay()                    
             elif c == curses.KEY_DOWN:
-                #for i in range(0,yscale):
-                #    if moveTetro(1,0):
-                #        updateDisplay()
-                #        sleep(0.05)
-                #    elif freezeMode:
-                #        nextTetro()
-                #n-=yscale
                 if moveTetro(1,0):
                     updateDisplay()
                     n = ns
                 elif freezeMode:
                     nextTetro()
             elif c == ord('/') and freezeMode:
-                #for i in range(0,yscale):
-                #    if moveTetro(-1,0):
-                #        updateDisplay()
-                #        sleep(0.05)
                 if moveTetro(-1,0):
                     updateDisplay()
             elif c == ord('z') or c == curses.KEY_UP:
